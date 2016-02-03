@@ -1,0 +1,30 @@
+<div class="wrapper wrapper_padding clearfix">
+	<div class="col-1 about homepage_content">
+		<h2>About</h2>
+		<hr>
+		<p>My name is Patrick and I am currently travelling
+		South East Asia for 3 and a half months.</p>
+		<p>On this blog I will post stories of my travels and
+		pictures along the way.</p>
+	</div>
+	<div class="col-2 homepage_content">
+		<h2>Stuff I've written</h2>
+		<hr>
+
+		<% @posts.each do |post| %>
+			<h3><a href="#"><%= link_to post.title, post %></a></h3>
+			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
+
+	</div>
+	<div class="col-3 homepage_content">
+		<h2>Gallery</h2>
+		<hr>
+		<h3><a href="#">Thailand</a></h3>
+		<p class="date">Tuesday February 10th</p>
+		<h3><a href="#">Malaysia</a></h3>
+		<p class="date">Friday April 11th</p>
+		<h3><a href="#">Vietnam and Camobia</a></h3>
+		<p class="date">Saturday March 22nd</p>
+	</div>
+</div>
