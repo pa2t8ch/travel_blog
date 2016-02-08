@@ -8,7 +8,7 @@
 		pictures along the way.</p>
 	</div>
 	<div class="col-2 homepage_content">
-		<h2>Stuff I've written</h2>
+		<h2>Recent Articles</h2>
 		<hr>
 
 		<% @posts.each do |post| %>
@@ -16,15 +16,10 @@
 			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
 
+		<%= link_to "View all", posts_path %>
+
 	</div>
 	<div class="col-3 homepage_content">
-		<h2>Gallery</h2>
-		<hr>
-		<h3><a href="#">Thailand</a></h3>
-		<p class="date">Tuesday February 10th</p>
-		<h3><a href="#">Malaysia</a></h3>
-		<p class="date">Friday April 11th</p>
-		<h3><a href="#">Vietnam and Camobia</a></h3>
-		<p class="date">Saturday March 22nd</p>
+		<%= image_tag("thailand2.jpg", :alt => "Mountain View", :style => "width: 50em; height: 30em") %>
 	</div>
 </div>
