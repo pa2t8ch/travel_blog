@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
+  get 'pages/map'
+
   resources :posts
 
   get 'welcome/index'
